@@ -9,6 +9,7 @@ import com.databasir.dao.enums.OAuthAppType;
 import com.databasir.dao.tables.pojos.OauthApp;
 import com.databasir.dao.tables.pojos.OauthAppProperty;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.google.common.base.Strings;
 import lombok.RequiredArgsConstructor;
 import org.jooq.tools.StringUtils;
 import org.springframework.security.authentication.CredentialsExpiredException;
@@ -77,6 +78,9 @@ public class GithubOpenAuthHandler implements OpenAuthHandler {
         }
         JsonNode profile = githubRemoteService.getProfile(resourceUrl, accessToken);
         String nickname = profile.get("name").asText();
+        if (Strings.isNullOrEmpty(nickname)) {
+            nickname = email;
+        }
         String avatar = profile.get("avatar_url").asText();
         OAuthProcessResult result = new OAuthProcessResult();
         result.setEmail(email);
