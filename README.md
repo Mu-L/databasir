@@ -2,13 +2,11 @@
 
 ## 简介
 
-![](docs/databasir.png) 是面向团队的**关系型数据库模型文档管理平台**，旨在通过自动化的方式解决模型文档管理过程中维护成本高、内容更新不及时以及团队协作复杂等问题。
+![](docs/databasir.png) Databasir 是面向团队的**关系型数据库模型文档管理平台**，旨在通过自动化的方式解决模型文档管理过程中维护成本高、内容更新不及时以及团队协作复杂等问题。
 
-平台文档：https://doc.databasir.com
+项目文档：https://github.com/vran-dev/databasir-docs
 
 问题反馈：https://github.com/vran-dev/databasir/issues
-
-平台演示：[~~https://demo.databasir.com~~](http://demo.databasir.com)
 
 ## 支持平台
 
